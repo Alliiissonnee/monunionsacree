@@ -1,14 +1,17 @@
 import Link from "next/link";
 
-// Logo provisoire en texte, à remplacer par le fichier SVG officiel.
+// Logo en texte : lettrine « M » en Passions Conflict + DM Serif Display.
 export function Logo() {
   return (
     <Link
       href="/"
-      className="font-serif text-2xl text-terracotta sm:text-3xl"
+      className="flex items-baseline font-serif text-2xl text-terracotta sm:text-3xl"
       aria-label="Mon Union Sacrée — accueil"
     >
-      <span className="text-4xl sm:text-5xl">M</span>on Union Sacrée
+      <span className="font-script text-6xl leading-none sm:text-7xl" aria-hidden="true">
+        M
+      </span>
+      <span aria-hidden="true">on Union Sacrée</span>
     </Link>
   );
 }

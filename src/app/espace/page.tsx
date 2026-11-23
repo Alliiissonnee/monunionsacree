@@ -9,8 +9,9 @@ export default function TableauDeBord() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-8">
       <h1 className="mb-10 text-center font-serif text-3xl text-terracotta sm:text-4xl">
-        <Suspense fallback="Bienvenue">
-          <Bienvenue />
+        <span className="font-script text-7xl leading-none sm:text-8xl">B</span>ienvenue{" "}
+        <Suspense fallback={null}>
+          <PrenomMembre />
         </Suspense>
       </h1>
 
@@ -38,9 +39,9 @@ export default function TableauDeBord() {
 }
 
 // Lit la session : doit rester derrière <Suspense> (Cache Components).
-async function Bienvenue() {
+async function PrenomMembre() {
   const membre = await getMembreConnecte();
-  return <>Bienvenue {membre.prenom}</>;
+  return <>{membre.prenom}</>;
 }
 
 function Tuile({ href, titre, className }: { href: string; titre: string; className: string }) {
