@@ -22,7 +22,7 @@ function BoutonDeconnexion({ className }: { className: string }) {
 
 export function MemberHeader() {
   return (
-    <header className="bg-bleu-gris">
+    <header className="sticky top-0 z-30 bg-bleu-gris">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-8">
         <Logo />
 
