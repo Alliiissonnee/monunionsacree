@@ -17,6 +17,8 @@ export const getMonProfil = cache(async () => {
   ]);
 
   if (profil.error || criteres.error) {
+    // Détail technique visible dans le terminal du serveur, pas par le membre.
+    console.error("getMonProfil :", profil.error ?? criteres.error);
     throw new Error("Impossible de charger votre profil.");
   }
 
